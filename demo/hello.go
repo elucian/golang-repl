@@ -1,14 +1,16 @@
 package demo
 
-var message string = "Hello Wordl"
-
 import (
 	"fmt"
+  "strings"
 )
+
+var message string = "Hello World!"
 
 func Hello() {
 	fmt.Println(message)
-	fmt.Println('-' * 10)
+	fmt.Println( 
+      strings.Repeat("-", len(message)))
 	fmt.Println("Go \n" + 
 	            "is \n" +
 				"ossome \n")	

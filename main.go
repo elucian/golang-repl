@@ -24,6 +24,7 @@ func print_menu() {
   fmt.Println("8 = Array Init") 
   fmt.Println("9 = Array Slice") 
   fmt.Println("A = Map demo") 
+  fmt.Println("B = Interpolation")
   fmt.Println("----------------- ")  
 }
 
@@ -56,7 +57,9 @@ func main() {
     } else if option == "9" {
       array.Slice()           
     } else if option == "A" {
-      maps.Init()          
+      maps.Init()    
+    } else if option == "B" {
+      demo.ItpRun()    
     } else {
       fmt.Println("invalid option")
       print_menu() 

@@ -25,6 +25,7 @@ func print_menu() {
   fmt.Println("9 = Array Slice") 
   fmt.Println("A = Map demo") 
   fmt.Println("B = Interpolation")
+  fmt.Println("C = For while") 
   fmt.Println("----------------- ")  
 }
 
@@ -59,7 +60,9 @@ func main() {
     } else if option == "A" {
       maps.Init()    
     } else if option == "B" {
-      demo.ItpRun()    
+      demo.ItpRun()  
+    } else if option == "C" {
+      demo.ForWhile()    
     } else {
       fmt.Println("invalid option")
       print_menu() 

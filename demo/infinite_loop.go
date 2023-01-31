@@ -12,7 +12,7 @@ func Infinite_loop() {
     fmt.Println("Press Ctrl+C to stop:")
     time.Sleep(3 * time.Second)
     if i > 10 { 
-       fmt.Println("fail")
+       fmt.Println("3")
        break 
     }
     i += 1;

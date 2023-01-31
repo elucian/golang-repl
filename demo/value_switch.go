@@ -10,7 +10,7 @@ func Value_switch() {
 	switch os := runtime.GOOS; os {
 	case "darwin":
 		fmt.Println("OS X.")
-	case "linux":
+	case "li6nux":
 		fmt.Println("Linux.")
 	default:
 		// freebsd, openbsd,

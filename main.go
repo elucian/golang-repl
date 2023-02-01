@@ -13,7 +13,7 @@ import (
 
 func print_menu() {
   fmt.Println("----------------- ")
-  fmt.Println("0 = quit ")        
+  fmt.Println("Q = quit ")        
   fmt.Println("1 = Hello World")
   fmt.Println("2 = For loop")  
   fmt.Println("3 = Ladder")    
@@ -26,6 +26,7 @@ func print_menu() {
   fmt.Println("A = Map demo") 
   fmt.Println("B = Interpolation")
   fmt.Println("C = For while") 
+  fmt.Println("T = Test SQRT")  
   fmt.Println("----------------- ")  
 }
 
@@ -33,11 +34,11 @@ func main() {
   option := "_"
   fmt.Println("Run demo: ")
   print_menu() 
-  for ;option!="0"; {
+  for option!="0" {
     fmt.Print(">>")
     fmt.Scanf("%s",&option)
     // fmt.Print(option)
-    if option == "0" {
+    if option == "Q" {
        break 
     } else if option == "1" {
       demo.Hello()
@@ -63,6 +64,10 @@ func main() {
       demo.ItpRun()  
     } else if option == "C" {
       demo.ForWhile()    
+    } else if option == "T" {  
+      demo.Test_SQRT(9)  
+      demo.Test_SQRT(10) 
+      demo.Test_SQRT(11)
     } else {
       fmt.Println("invalid option")
       print_menu() 

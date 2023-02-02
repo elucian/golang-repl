@@ -6,10 +6,12 @@ import (
 	array "golang/array"
 	demo "golang/demo"
 	maps "golang/maps"
+  collect "golang/collect"
 )
 
 func print_menu() {
 	fmt.Println("----------------- ")
+  fmt.Println("0 = clear ")
 	fmt.Println("Q = quit ")
 	fmt.Println("1 = Hello World")
 	fmt.Println("2 = For loop")
@@ -25,6 +27,7 @@ func print_menu() {
 	fmt.Println("C = For while")
 	fmt.Println("T = Sqrt func")
 	fmt.Println("R = For Range")
+	fmt.Println("S = Struct test")  
 	fmt.Println("----------------- ")
 }
 
@@ -32,13 +35,15 @@ func main() {
 	option := "_"
 	fmt.Println("Run demo: ")
 	print_menu()
-	for option != "0" {
+	for option != "Q" {
 		fmt.Print(">>")
 		fmt.Scanf("%s", &option)
 		// fmt.Print(option)
 		if option == "Q" {
 			break
-		} else if option == "1" {
+		} else if option == "0" {
+      fmt.Print("\033[H\033[2J")
+    } else if option == "1" {
 			demo.Hello()
 		} else if option == "2" {
 			demo.For_loop()
@@ -68,6 +73,8 @@ func main() {
 			demo.Test_SQRT(11)
 		} else if option == "R" {
 			demo.Range()
+    } else if option == "S" {
+      collect.Struct()
 		} else {
 			fmt.Println("invalid option")
 			print_menu()

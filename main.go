@@ -7,6 +7,7 @@ import (
 	demo "golang/demo"
 	maps "golang/maps"
   collect "golang/collect"
+  funcs "golang/funcs"
 )
 
 func print_menu() {
@@ -27,7 +28,9 @@ func print_menu() {
 	fmt.Println("C = For while")
 	fmt.Println("T = Sqrt func")
 	fmt.Println("R = For Range")
-	fmt.Println("S = Struct test")  
+	fmt.Println("S = Struct test")
+  fmt.Println("M = Map literals")
+  fmt.Println("F = Muliple results")
 	fmt.Println("----------------- ")
 }
 
@@ -75,6 +78,10 @@ func main() {
 			demo.Range()
     } else if option == "S" {
       collect.Struct()
+    } else if option == "M" {
+      collect.MapLiterals()
+    } else if option == "F" {
+      funcs.TestSwap()
 		} else {
 			fmt.Println("invalid option")
 			print_menu()

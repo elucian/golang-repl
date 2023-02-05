@@ -5,8 +5,10 @@ import (
 	"math"
 )
 
+var lim float64 = 8
+
 // limited power
-func pow_lim(x, n, lim float64) float64 {
+func pow_lim(x, n float64) float64 {
 	if v := math.Pow(x, n); v < lim {
 		return v
 	}
@@ -14,8 +16,7 @@ func pow_lim(x, n, lim float64) float64 {
 }
 
 func Local_scope() {
-	fmt.Println(
-		pow_lim(3, 2, 20),
-		pow_lim(7, 3, 20),
-	)
+	fmt.Println(pow_lim(3, 3))
+  lim = 20
+  fmt.Println(pow_lim(3, 3))
 }

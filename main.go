@@ -31,6 +31,7 @@ func print_menu() {
 	fmt.Println("S = Struct test")
   fmt.Println("M = Map literals")
   fmt.Println("F = Muliple results")
+  fmt.Println("E = Factorial")
 	fmt.Println("----------------- ")
 }
 
@@ -82,6 +83,10 @@ func main() {
       collect.MapLiterals()
     } else if option == "F" {
       funcs.TestSwap()
+    } else if option == "E" {
+      funcs.TestFactorial(5)
+      funcs.TestFactorial(6)
+      funcs.TestFactorial(7)
 		} else {
 			fmt.Println("invalid option")
 			print_menu()

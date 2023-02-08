@@ -32,6 +32,7 @@ func print_menu() {
   fmt.Println("M = Map literals")
   fmt.Println("F = Muliple results")
   fmt.Println("E = Factorial")
+  fmt.Println("G = Closure")
 	fmt.Println("----------------- ")
 }
 
@@ -87,7 +88,9 @@ func main() {
       funcs.TestFactorial(5)
       funcs.TestFactorial(6)
       funcs.TestFactorial(7)
-		} else {
+    } else if option == "G" {
+      funcs.TestClosure(2)
+    } else {
 			fmt.Println("invalid option")
 			print_menu()
 		}

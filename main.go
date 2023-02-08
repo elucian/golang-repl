@@ -4,10 +4,11 @@ package main
 import (
 	"fmt"
 	array "golang/array"
+	collect "golang/collect"
 	demo "golang/demo"
+	funcs "golang/funcs"
 	maps "golang/maps"
-  collect "golang/collect"
-  funcs "golang/funcs"
+	pointer "golang/pointer"
 )
 
 func print_menu() {
@@ -24,15 +25,16 @@ func print_menu() {
 	fmt.Println("8 = Array Init")
 	fmt.Println("9 = Array Slice")
 	fmt.Println("A = Map demo")
+  fmt.Println("M = Map literals")
 	fmt.Println("B = Interpolation")
-	fmt.Println("C = For while")
-	fmt.Println("T = Sqrt func")
+  fmt.Println("C = Closure")
+  fmt.Println("E = Factorial")
+	fmt.Println("F = For while")
+  fmt.Println("P = Pointer")
 	fmt.Println("R = For Range")
 	fmt.Println("S = Struct test")
-  fmt.Println("M = Map literals")
-  fmt.Println("F = Muliple results")
-  fmt.Println("E = Factorial")
-  fmt.Println("G = Closure")
+	fmt.Println("T = Sqrt func")
+  fmt.Println("W = Swap values")
 	fmt.Println("----------------- ")
 }
 
@@ -70,7 +72,7 @@ func main() {
 			maps.Init()
 		} else if option == "B" {
 			demo.ItpRun()
-		} else if option == "C" {
+		} else if option == "F" {
 			demo.ForWhile()
 		} else if option == "T" {
 			demo.Test_SQRT(9)
@@ -82,14 +84,16 @@ func main() {
       collect.Struct()
     } else if option == "M" {
       collect.MapLiterals()
-    } else if option == "F" {
+    } else if option == "W" {
       funcs.TestSwap()
     } else if option == "E" {
       funcs.TestFactorial(5)
       funcs.TestFactorial(6)
       funcs.TestFactorial(7)
-    } else if option == "G" {
+    } else if option == "C" {
       funcs.TestClosure(2)
+    } else if option == "P" {
+      pointer.TestPointer()
     } else {
 			fmt.Println("invalid option")
 			print_menu()

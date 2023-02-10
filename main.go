@@ -12,7 +12,7 @@ import (
 )
 
 func print_menu() {
-	fmt.Println("----------------- ")
+	fmt.Println("---------------------- ")
   fmt.Println("0 = clear ")
 	fmt.Println("Q = quit ")
 	fmt.Println("1 = Hello World")
@@ -24,7 +24,8 @@ func print_menu() {
 	fmt.Println("7 = Local scope")
 	fmt.Println("8 = Array Init")
 	fmt.Println("9 = Array Slice")
-	fmt.Println("A = Map demo")
+	fmt.Println("A = Anonymous function")
+	fmt.Println("D = Map demo")
   fmt.Println("M = Map literals")
 	fmt.Println("B = Interpolation")
   fmt.Println("C = Closure")
@@ -35,7 +36,8 @@ func print_menu() {
 	fmt.Println("S = Struct test")
 	fmt.Println("T = Sqrt func")
   fmt.Println("W = Swap values")
-	fmt.Println("----------------- ")
+  fmt.Println("V = Variadic functions")
+	fmt.Println("--------------------- ")
 }
 
 func main() {
@@ -68,7 +70,9 @@ func main() {
 			array.Init()
 		} else if option == "9" {
 			array.Slice()
-		} else if option == "A" {
+ 		} else if option == "A" {
+			funcs.Anonymous()     
+		} else if option == "D" {
 			maps.Init()
 		} else if option == "B" {
 			demo.ItpRun()
@@ -94,6 +98,8 @@ func main() {
       funcs.TestClosure(2)
     } else if option == "P" {
       pointer.TestPointer()
+    } else if option == "V" {
+      funcs.TestVariadic()
     } else {
 			fmt.Println("invalid option")
 			print_menu()

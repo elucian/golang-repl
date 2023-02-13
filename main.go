@@ -1,5 +1,10 @@
-//golang-repl
 package main
+
+/* ---------------------------------
+   golang-repl
+   an application for learning Go.
+   by Elucian Moise on Sage-Code
+  --------------------------------- */
 
 import (
 	"fmt"
@@ -9,8 +14,11 @@ import (
 	funcs "golang/funcs"
 	maps "golang/maps"
 	pointer "golang/pointer"
+  structs "golang/structs"
 )
 
+/* show on console the options to 
+   explain what the app does */
 func print_menu() {
 	fmt.Println("---------------------- ")
   fmt.Println("0 = clear ")
@@ -38,12 +46,20 @@ func print_menu() {
   fmt.Println("W = Swap values")
   fmt.Println("V = Variadic functions")
 	fmt.Println("--------------------- ")
+  fmt.Println("X = neXt screen")
 }
 
+/* clear the screen */
+func clear() {
+  fmt.Print("\033[H\033[2J")
+}
+
+/* entry point, start the main loop */
 func main() {
 	option := "_"
 	fmt.Println("Run demo: ")
 	print_menu()
+  // the actual loop (cycle)
 	for option != "Q" {
 		fmt.Print(">>")
 		fmt.Scanf("%s", &option)
@@ -51,7 +67,7 @@ func main() {
 		if option == "Q" {
 			break
 		} else if option == "0" {
-      fmt.Print("\033[H\033[2J")
+      clear()
     } else if option == "1" {
 			demo.Hello()
 		} else if option == "2" {
@@ -79,13 +95,14 @@ func main() {
 		} else if option == "F" {
 			demo.ForWhile()
 		} else if option == "T" {
-			demo.Test_SQRT(9)
+      //sqrt_func.go file
+			demo.Test_SQRT(9)  
 			demo.Test_SQRT(10)
 			demo.Test_SQRT(11)
 		} else if option == "R" {
 			demo.Range()
     } else if option == "S" {
-      collect.Struct()
+      structs.TestStruct()
     } else if option == "M" {
       collect.MapLiterals()
     } else if option == "W" {
@@ -100,6 +117,8 @@ func main() {
       pointer.TestPointer()
     } else if option == "V" {
       funcs.TestVariadic()
+    } else if option == "X" {
+      select_secod()
     } else {
 			fmt.Println("invalid option")
 			print_menu()

@@ -9,12 +9,8 @@ package main
 import (
 	"fmt"
 	array "golang/array"
-	collect "golang/collect"
 	demo "golang/demo"
-	funcs "golang/funcs"
 	maps "golang/maps"
-	pointer "golang/pointer"
-  structs "golang/structs"
 )
 
 /* show on console the options to 
@@ -32,19 +28,11 @@ func print_menu() {
 	fmt.Println("7 = Local scope")
 	fmt.Println("8 = Array Init")
 	fmt.Println("9 = Array Slice")
-	fmt.Println("A = Anonymous function")
 	fmt.Println("D = Map demo")
-  fmt.Println("M = Map literals")
 	fmt.Println("B = Interpolation")
-  fmt.Println("C = Closure")
-  fmt.Println("E = Factorial")
-	fmt.Println("F = For while")
-  fmt.Println("P = Pointer")
+	fmt.Println("W = For while")
 	fmt.Println("R = For Range")
-	fmt.Println("S = Struct test")
-	fmt.Println("T = Sqrt func")
-  fmt.Println("W = Swap values")
-  fmt.Println("V = Variadic functions")
+	fmt.Println("T = Sqrt func")  
 	fmt.Println("--------------------- ")
   fmt.Println("X = neXt screen")
 }
@@ -85,14 +73,12 @@ func main() {
 		} else if option == "8" {
 			array.Init()
 		} else if option == "9" {
-			array.Slice()
- 		} else if option == "A" {
-			funcs.Anonymous()     
+			array.Slice()  
 		} else if option == "D" {
 			maps.Init()
 		} else if option == "B" {
 			demo.ItpRun()
-		} else if option == "F" {
+		} else if option == "W" {
 			demo.ForWhile()
 		} else if option == "T" {
       //sqrt_func.go file
@@ -101,22 +87,6 @@ func main() {
 			demo.Test_SQRT(11)
 		} else if option == "R" {
 			demo.Range()
-    } else if option == "S" {
-      structs.TestStruct()
-    } else if option == "M" {
-      collect.MapLiterals()
-    } else if option == "W" {
-      funcs.TestSwap()
-    } else if option == "E" {
-      funcs.TestFactorial(5)
-      funcs.TestFactorial(6)
-      funcs.TestFactorial(7)
-    } else if option == "C" {
-      funcs.TestClosure(2)
-    } else if option == "P" {
-      pointer.TestPointer()
-    } else if option == "V" {
-      funcs.TestVariadic()
     } else if option == "X" {
       select_secod()
     } else {

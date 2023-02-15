@@ -13,11 +13,12 @@ import (
 	maps "golang/maps"
 )
 
-/* show on console the options to 
+/* show on console the options to
    explain what the app does */
 func print_menu() {
 	fmt.Println("---------------------- ")
-  fmt.Println("0 = clear ")
+	fmt.Println("0 = clear")
+	fmt.Println("---------------------- ")
 	fmt.Println("Q = quit ")
 	fmt.Println("1 = Hello World")
 	fmt.Println("2 = For loop")
@@ -28,18 +29,20 @@ func print_menu() {
 	fmt.Println("7 = Local scope")
 	fmt.Println("8 = Array Init")
 	fmt.Println("9 = Array Slice")
-	fmt.Println("D = Map demo")
-	fmt.Println("B = Interpolation")
-	fmt.Println("W = For while")
+	fmt.Println("M = Map demo")
+	fmt.Println("I = Interpolation")
+	fmt.Println("F = For while")
 	fmt.Println("R = For Range")
-	fmt.Println("T = Sqrt func")  
+	fmt.Println("S = Sqrt func")
+  fmt.Println("E = Error handling")
 	fmt.Println("--------------------- ")
-  fmt.Println("X = neXt screen")
+	fmt.Println("ENTER = next menu")
+  // next menu in in second.go
 }
 
 /* clear the screen */
 func clear() {
-  fmt.Print("\033[H\033[2J")
+	fmt.Print("\033[H\033[2J")
 }
 
 /* entry point, start the main loop */
@@ -47,7 +50,7 @@ func main() {
 	option := "_"
 	fmt.Println("Run demo: ")
 	print_menu()
-  // the actual loop (cycle)
+	// the actual loop (cycle)
 	for option != "Q" {
 		fmt.Print(">>")
 		fmt.Scanf("%s", &option)
@@ -55,8 +58,8 @@ func main() {
 		if option == "Q" {
 			break
 		} else if option == "0" {
-      clear()
-    } else if option == "1" {
+			clear()
+		} else if option == "1" {
 			demo.Hello()
 		} else if option == "2" {
 			demo.For_loop()
@@ -73,25 +76,25 @@ func main() {
 		} else if option == "8" {
 			array.Init()
 		} else if option == "9" {
-			array.Slice()  
-		} else if option == "D" {
+			array.Slice()
+		} else if option == "M" {
 			maps.Init()
-		} else if option == "B" {
+		} else if option == "I" {
 			demo.ItpRun()
-		} else if option == "W" {
+		} else if option == "F" {
 			demo.ForWhile()
-		} else if option == "T" {
-      //sqrt_func.go file
-			demo.Test_SQRT(9)  
+		} else if option == "E" {
+			demo.TestErrors()
+		} else if option == "S" {
+			//sqrt_func.go file
+			demo.Test_SQRT(9)
 			demo.Test_SQRT(10)
 			demo.Test_SQRT(11)
 		} else if option == "R" {
 			demo.Range()
-    } else if option == "X" {
-      select_secod()
-    } else {
-			fmt.Println("invalid option")
-			print_menu()
+		} else {
+      clear();secod()
 		}
-	}
+    option = "_"
+	} //for
 }

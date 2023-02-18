@@ -15,8 +15,9 @@ func more() {
 	fmt.Println("C = Closure")
 	fmt.Println("P = Pointer")
 	fmt.Println("A = Anonymous function")
-	fmt.Println("M = Methods & Interface ")
-	fmt.Println("L = Map literals")
+	fmt.Println("H = Methods & Interface ")
+	fmt.Println("L = Linked list")  
+	fmt.Println("M = Map literals")
 	fmt.Println("S = Struct test")
 	fmt.Println("F = Factorial")
 	fmt.Println("W = Swap values")
@@ -24,6 +25,7 @@ func more() {
 	fmt.Println("R = Recover from panic")
 	fmt.Println("T = Timer")
 	fmt.Println("G = Goroutines")
+  fmt.Println("Z = Randomize")
 	fmt.Println("---------------------- ")
 	fmt.Println("ENTER = main menu")
 	//main menu is in main.go
@@ -39,7 +41,7 @@ func secod() {
 		switch option {
 		case "0":
 			clear()
-		case "M":
+		case "H":
 			//methods.go
 			structs.TestMethods()
 		case "A":
@@ -59,6 +61,8 @@ func secod() {
 		case "V":
 			funcs.TestVariadic()
 		case "L":
+			structs.LinkedList()
+		case "M":
 			collect.MapLiterals()
 		case "R":
 			funcs.TestRecover()
@@ -66,6 +70,8 @@ func secod() {
 			funcs.TestTimer()
     case "G": 
       funcs.TestGoroutine()
+    case "Z":
+      funcs.TestRandomize()
 		default:
 			clear()
 			print_menu()

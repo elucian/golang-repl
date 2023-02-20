@@ -8,8 +8,8 @@ import (
 	structs "golang/structs"
 )
 
-func more() {
-	fmt.Println("---------------------- ")
+func second_menu() {
+	fmt.Println("2:-------------------- ")
 	fmt.Println("0 = clear ")
 	fmt.Println("---------------------- ")
 	fmt.Println("C = Closure")
@@ -26,15 +26,17 @@ func more() {
 	fmt.Println("T = Timer")
 	fmt.Println("G = Goroutines")
   fmt.Println("Z = Randomize")
+  fmt.Println("X = Regular eXpressions")
 	fmt.Println("---------------------- ")
-	fmt.Println("ENTER = main menu")
+	fmt.Println("ENTER => third menu")
 	//main menu is in main.go
 }
 
+// start second selection
 func secod() {
 	var option = "_"
 	clear()
-	more()
+	second_menu()
 	for option != "Q" {
 		fmt.Print(">>")
 		fmt.Scanf("%s", &option)
@@ -72,9 +74,10 @@ func secod() {
       funcs.TestGoroutine()
     case "Z":
       funcs.TestRandomize()
+    case "X":
+      funcs.TestRegex()
 		default:
-			clear()
-			print_menu()
+			clear(); third()
 			return
 		} //switch
 		option = "_"

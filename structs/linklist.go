@@ -19,7 +19,7 @@ type List struct {
 func (L *List) Insert(value interface{}) {
 	list := &Node{
 		next: L.head,
-		key:  value,
+		value:  value,
 	}
 	if L.head != nil {
 		L.head.prev = list

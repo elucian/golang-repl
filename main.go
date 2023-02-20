@@ -1,7 +1,6 @@
 package main
 
 /* ---------------------------------
-   golang-repl
    an application for learning Go.
    by Elucian Moise on Sage-Code
   --------------------------------- */
@@ -16,7 +15,7 @@ import (
 /* show on console the options to
    explain what the app does */
 func print_menu() {
-	fmt.Println("---------------------- ")
+	fmt.Println("1:-------------------- ")
 	fmt.Println("0 = clear")
 	fmt.Println("---------------------- ")
 	fmt.Println("Q = quit ")
@@ -36,7 +35,7 @@ func print_menu() {
 	fmt.Println("S = Sqrt func")
   fmt.Println("E = Error handling")
 	fmt.Println("--------------------- ")
-	fmt.Println("ENTER = next menu")
+	fmt.Println("ENTER => second menu")
   // next menu in in second.go
 }
 

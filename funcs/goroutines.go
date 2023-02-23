@@ -1,5 +1,4 @@
 // A _goroutine_ is a lightweight thread of execution.
-
 package funcs
 
 import (

@@ -10,6 +10,8 @@ func third_menu() {
 	fmt.Println("0 = clear ")
 	fmt.Println("---------------------- ")
 	fmt.Println("I = Interfsces")
+  fmt.Println("S = String functions")
+  fmt.Println("C = Channels")  
 	fmt.Println("---------------------- ")
 	fmt.Println("ENTER => main menu")
 	//main menu is in main.go
@@ -27,6 +29,10 @@ func third() {
 			clear()
     case "I":
       funcs.TestInterface()
+    case "S":
+      funcs.TestString()
+    case "C":
+      funcs.TestChannels()
 		default:
 			clear(); print_menu()
 			return

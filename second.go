@@ -19,6 +19,7 @@ func second_menu() {
 	fmt.Println("L = Linked list")  
 	fmt.Println("M = Map literals")
 	fmt.Println("S = Struct test")
+ 	fmt.Println("E = Embedded struct") 
 	fmt.Println("F = Factorial")
 	fmt.Println("W = Swap values")
 	fmt.Println("V = Variadic functions")
@@ -50,6 +51,8 @@ func secod() {
 			funcs.Anonymous()
 		case "S":
 			structs.TestStruct()
+    case "E":
+      structs.TestEmbedded()
 		case "W":
 			funcs.TestSwap()
 		case "F":

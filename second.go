@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 	collect "golang/collect"
-	funcs "golang/funcs"
+	funcs   "golang/funcs"
 	pointer "golang/pointer"
 	structs "golang/structs"
 )

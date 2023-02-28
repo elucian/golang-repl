@@ -1,7 +1,7 @@
 /* _Channels_ are the pipes that connect concurrent goroutines. You can send values into channels from one goroutine and receive those values into another goroutine.
 */
 
-package funcs
+package chans
 
 import "fmt"
 

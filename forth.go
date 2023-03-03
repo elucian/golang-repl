@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"golang/algo"
+	"golang/str"
 )
 
 func forth_menu() {
@@ -10,6 +11,9 @@ func forth_menu() {
 	fmt.Println("0 = clear ")
 	fmt.Println("---------------------- ")
 	fmt.Println("S = Sorting") 
+  fmt.Println("P = Parse String")
+  fmt.Println("F = String Functions")
+  fmt.Println("J = JSON Parsing")
 	fmt.Println("---------------------- ")
 	fmt.Println("ENTER => main menu")
 	//main menu is in main.go
@@ -27,6 +31,12 @@ func forth() {
 			clear()
     case "S":
       algo.TestSorting()
+    case "P":
+      str.TestParser()
+    case "J":
+      str.TestJSON()
+    case "F":
+      str.TestFunctions()
 		default:
 			clear(); print_menu()
 			return

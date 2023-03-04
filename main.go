@@ -29,8 +29,6 @@ func print_menu() {
 	fmt.Println("S = Array Slice")
 	fmt.Println("I = Interpolation")
 	fmt.Println("F = For while")
-	fmt.Println("R = For Range")
-	fmt.Println("S = Sqrt func")
 	fmt.Println("E = Error handling")
 	fmt.Println("--------------------- ")
 	fmt.Println("SUBMENU: 0,1,2,3,4")

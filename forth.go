@@ -10,11 +10,11 @@ func forth_menu() {
 	fmt.Println("---------------------- ")
 	fmt.Println("         FORTH         ")
 	fmt.Println("---------------------- ")
-	fmt.Println("S = Sorting") 
+	fmt.Println("O = Sorting") 
   fmt.Println("P = Parse String")
-  fmt.Println("F = String Functions")
+  fmt.Println("S = String Functions")
   fmt.Println("J = JSON Parsing")
-  fmt.Println("O = Format string")
+  fmt.Println("F = Format string")
 	fmt.Println("---------------------- ")
 	fmt.Println("ENTER => main menu")  
 	//main menu is in main.go
@@ -30,15 +30,15 @@ func forth() {
 		switch option {
 		case "0":
 			clear()
-    case "S":
+    case "O":
       algo.TestSorting()
     case "P":
       str.TestParser()
     case "J":
       str.TestJSON()
-    case "F":
+    case "S":
       str.TestFunctions()
-    case "O":
+    case "F":
       str.TestFormat()
 		default:
 			clear(); print_menu()

@@ -15,6 +15,7 @@ func forth_menu() {
   fmt.Println("S = String Functions")
   fmt.Println("J = JSON Parsing")
   fmt.Println("F = Format string")
+  fmt.Println("T = Text template")
 	fmt.Println("---------------------- ")
 	fmt.Println("ENTER => main menu")  
 	//main menu is in main.go
@@ -40,6 +41,8 @@ func forth() {
       str.TestFunctions()
     case "F":
       str.TestFormat()
+    case "T":
+      str.TestTemplate()
 		default:
 			clear(); print_menu()
 			return

@@ -9,8 +9,8 @@ import (
 )
 
 func second_menu() {
-	fmt.Println("2:-------------------- ")
-	fmt.Println("0 = clear ")
+	fmt.Println("---------------------- ")
+	fmt.Println("        SECOND         ")
 	fmt.Println("---------------------- ")
 	fmt.Println("C = Closure")
 	fmt.Println("P = Pointer")
@@ -29,12 +29,12 @@ func second_menu() {
   fmt.Println("Z = Randomize")
   fmt.Println("X = Regular eXpressions")
 	fmt.Println("---------------------- ")
-	fmt.Println("ENTER => third menu")
+	fmt.Println("ENTER => main menu")
 	//main menu is in main.go
 }
 
 // start second selection
-func secod() {
+func second() {
 	var option = "_"
 	clear()
 	second_menu()
@@ -80,7 +80,7 @@ func secod() {
     case "X":
       funcs.TestRegex()
 		default:
-			clear(); third()
+			clear(); print_menu()
 			return
 		} //switch
 		option = "_"

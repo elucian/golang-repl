@@ -9,8 +9,8 @@ import (
 )
 
 func third_menu() {
-	fmt.Println("3:-------------------- ")
-	fmt.Println("0 = clear ")
+	fmt.Println("---------------------- ")
+  fmt.Println("         THIRD         ")
 	fmt.Println("---------------------- ")
 	fmt.Println("I = Interfsces")
   fmt.Println("S = String functions")
@@ -53,7 +53,7 @@ func third() {
     case "N":
       chans.Closing()
 		default:
-			clear(); forth()
+			clear(); print_menu()
 			return
 		} //switch
 		option = "_"

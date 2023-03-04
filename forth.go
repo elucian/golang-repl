@@ -7,15 +7,16 @@ import (
 )
 
 func forth_menu() {
-	fmt.Println("4:-------------------- ")
-	fmt.Println("0 = clear ")
+	fmt.Println("---------------------- ")
+	fmt.Println("         FORTH         ")
 	fmt.Println("---------------------- ")
 	fmt.Println("S = Sorting") 
   fmt.Println("P = Parse String")
   fmt.Println("F = String Functions")
   fmt.Println("J = JSON Parsing")
+  fmt.Println("O = Format string")
 	fmt.Println("---------------------- ")
-	fmt.Println("ENTER => main menu")
+	fmt.Println("ENTER => main menu")  
 	//main menu is in main.go
 }
 
@@ -37,6 +38,8 @@ func forth() {
       str.TestJSON()
     case "F":
       str.TestFunctions()
+    case "O":
+      str.TestFormat()
 		default:
 			clear(); print_menu()
 			return

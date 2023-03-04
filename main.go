@@ -9,34 +9,32 @@ import (
 	"fmt"
 	array "golang/array"
 	demo "golang/demo"
-	maps "golang/maps"
 )
 
 /* show on console the options to
    explain what the app does */
 func print_menu() {
-	fmt.Println("1:-------------------- ")
-	fmt.Println("0 = clear")
 	fmt.Println("---------------------- ")
-	fmt.Println("Q = quit ")
-	fmt.Println("1 = Hello World")
-	fmt.Println("2 = For loop")
-	fmt.Println("3 = Ladder")
-	fmt.Println("4 = Infinite loop")
-	fmt.Println("5 = Value switch")
-	fmt.Println("6 = Cond switch")
-	fmt.Println("7 = Local scope")
-	fmt.Println("8 = Array Init")
-	fmt.Println("9 = Array Slice")
-	fmt.Println("M = Map demo")
+	fmt.Println("         MAIN          ")
+	fmt.Println("---------------------- ")
+	fmt.Println("Q = quit")
+	fmt.Println("H = Hello World")
+	fmt.Println("F = For loop")
+	fmt.Println("L = Ladder")
+	fmt.Println("E = Infinite loop")
+	fmt.Println("V = Value switch")
+	fmt.Println("G = Cond switch")
+	fmt.Println("C = Local scope")
+	fmt.Println("I = Array Init")
+	fmt.Println("S = Array Slice")
 	fmt.Println("I = Interpolation")
 	fmt.Println("F = For while")
 	fmt.Println("R = For Range")
 	fmt.Println("S = Sqrt func")
-  fmt.Println("E = Error handling")
+	fmt.Println("E = Error handling")
 	fmt.Println("--------------------- ")
-	fmt.Println("ENTER => second menu")
-  // next menu in in second.go
+	fmt.Println("SUBMENU: 0,1,2,3,4")
+	// next menu in in second.go
 }
 
 /* clear the screen */
@@ -58,42 +56,40 @@ func main() {
 			break
 		} else if option == "0" {
 			clear()
-		} else if option == "1" {
+		} else if option == "H" {
 			demo.Hello()
-		} else if option == "2" {
-			demo.For_loop()
-		} else if option == "3" {
-			demo.Ladder()
-		} else if option == "4" {
-			demo.Infinite_loop()
-		} else if option == "5" {
-			demo.Value_switch()
-		} else if option == "6" {
-			demo.Cond_switch()
-		} else if option == "7" {
-			demo.Local_scope()
-		} else if option == "8" {
-			array.Init()
-		} else if option == "9" {
-			array.Slice()
-		} else if option == "M" {
-			maps.Init()
-		} else if option == "I" {
-			demo.ItpRun()
 		} else if option == "F" {
-			demo.ForWhile()
+			demo.For_loop()
+		} else if option == "L" {
+			demo.Ladder()
 		} else if option == "E" {
-			demo.TestErrors()
+			demo.Infinite_loop()
+		} else if option == "V" {
+			demo.Value_switch()
+		} else if option == "G" {
+			demo.Cond_switch()
+		} else if option == "C" {
+			demo.Local_scope()
+		} else if option == "I" {
+			array.Init()
 		} else if option == "S" {
-			//sqrt_func.go file
-			demo.Test_SQRT(9)
-			demo.Test_SQRT(10)
-			demo.Test_SQRT(11)
-		} else if option == "R" {
-			demo.Range()
+			array.Slice()
+		} else if option == "1" {
+			clear()
+			first()
+		} else if option == "2" {
+			clear()
+			second()
+		} else if option == "3" {
+			clear()
+			third()
+		} else if option == "4" {
+			clear()
+			forth()
 		} else {
-      clear();secod()
+			clear()
+			print_menu()
 		}
-    option = "_"
+		option = "_"
 	} //for
 }

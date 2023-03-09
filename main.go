@@ -29,7 +29,6 @@ func print_menu() {
 	fmt.Println("S = Array Slice")
 	fmt.Println("I = Interpolation")
 	fmt.Println("F = For while")
-	fmt.Println("E = Error handling")
 	fmt.Println("--------------------- ")
 	fmt.Println("SUBMENU: 0,1,2,3,4")
 	// next menu in in second.go
@@ -56,8 +55,6 @@ func main() {
 			clear()
 		} else if option == "H" {
 			demo.Hello()
-		} else if option == "F" {
-			demo.For_loop()
 		} else if option == "L" {
 			demo.Ladder()
 		} else if option == "E" {
@@ -68,10 +65,12 @@ func main() {
 			demo.Cond_switch()
 		} else if option == "C" {
 			demo.Local_scope()
+  	} else if option == "S" {
+			array.Slice()
 		} else if option == "I" {
 			array.Init()
-		} else if option == "S" {
-			array.Slice()
+		} else if option == "F" {
+			demo.For_loop()
 		} else if option == "1" {
 			clear()
 			first()

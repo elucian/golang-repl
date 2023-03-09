@@ -5,7 +5,6 @@ import (
 	// "golang/demo"
 	"golang/funcs"
   "golang/chans"
-	// structs "golang/structs"
 )
 
 func third_menu() {
@@ -17,7 +16,6 @@ func third_menu() {
   fmt.Println("C = Channels")  
   fmt.Println("B = Buffered channel")
   fmt.Println("W = Wait for goroutine")
-  fmt.Println("G = Generic")  
   fmt.Println("E = Select channels")  
   fmt.Println("N = Closing channels") 
 	fmt.Println("---------------------- ")
@@ -43,9 +41,6 @@ func third() {
       chans.TestChannels()
     case "B":
       chans.TestBuffer()
-    case "G":
-      //structs.TestGeneric()
-      fmt.Print("Not supported")
     case "E":
       chans.TestSelect()
     case "W":

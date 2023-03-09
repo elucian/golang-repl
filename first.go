@@ -7,8 +7,9 @@ package main
 
 import (
 	"fmt"
-	demo "golang/demo"
-	maps "golang/maps"
+	"golang/demo"
+	"golang/maps"
+  "golang/funcs"
 )
 
 /* show on console the options to
@@ -23,6 +24,7 @@ func first_menu() {
 	fmt.Println("R = For Range")
 	fmt.Println("S = Sqrt func")
   fmt.Println("E = Error handling")
+  fmt.Println("P = Panic")
 	fmt.Println("--------------------- ")
 	fmt.Println("ENTER => main menu")
   // next menu in in second.go
@@ -51,11 +53,13 @@ func first() {
 			demo.ForWhile()
 		} else if option == "E" {
 			demo.TestErrors()
+		} else if option == "P" {
+			demo.TestPanic()
 		} else if option == "S" {
 			//sqrt_func.go file
-			demo.Test_SQRT(9)
-			demo.Test_SQRT(10)
-			demo.Test_SQRT(11)
+			funcs.Test_SQRT(9)
+			funcs.Test_SQRT(10)
+			funcs.Test_SQRT(11)
 		} else if option == "R" {
 			demo.Range()
 		} else {

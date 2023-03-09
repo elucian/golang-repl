@@ -27,7 +27,6 @@ func second_menu() {
 	fmt.Println("T = Timer")
 	fmt.Println("G = Goroutines")
   fmt.Println("Z = Randomize")
-  fmt.Println("X = Regular eXpressions")
 	fmt.Println("---------------------- ")
 	fmt.Println("ENTER => main menu")
 	//main menu is in main.go
@@ -77,8 +76,6 @@ func second() {
       funcs.TestGoroutine()
     case "Z":
       funcs.TestRandomize()
-    case "X":
-      funcs.TestRegex()
 		default:
 			clear(); print_menu()
 			return

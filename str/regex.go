@@ -1,4 +1,4 @@
-package funcs
+package str
 
 import (
 	"bytes"

@@ -29,6 +29,7 @@ func print_menu() {
 	fmt.Println("S = Array Slice")
 	fmt.Println("I = Interpolation")
 	fmt.Println("F = For while")
+  fmt.Println("X = Exit")
 	fmt.Println("--------------------- ")
 	fmt.Println("SUBMENU: 0,1,2,3,4")
 	// next menu in in second.go
@@ -71,6 +72,8 @@ func main() {
 			array.Init()
 		} else if option == "F" {
 			demo.For_loop()
+    } else if option == "X" {
+      demo.DemoExit();
 		} else if option == "1" {
 			clear()
 			first()
